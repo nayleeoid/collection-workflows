@@ -3,7 +3,7 @@ Author Linnea Shieh <laiello@stanford.edu>
 Copyright Stanford University 2019
 
 Figures out remaining recurring purchases for a fiscal year, and outputs
-than tabularly along with their cost estimates from the previous year.
+them tabularly along with their cost estimates from the previous year.
 """
 
 import argparse
@@ -56,10 +56,6 @@ def RunRecurringPurchases(orders_file, expenditures_file, csv=False):
     expenditures_file: (str) Path to the year-ago Expenditures report.
     csv: (bool) Whether the user would like output as a csv (default is png).
   """
-  total_order_count = 0
-  upcoming_count = 0
-  output_file = "UpcomingPurchases"
-
   df_ord = pd.read_excel(
       orders_file, sheet_name="enc_rpt1563914632", header=0)
   df_exp = pd.read_excel(
